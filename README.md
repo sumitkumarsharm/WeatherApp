@@ -34,7 +34,7 @@ A responsive weather forecast web application built using **React**, **Vite**, a
 
 ### 🌐☀️ Desktop light View
 
-<img src="./public/screenshots/home-desktop-light.png.png" alt="Desktop light view" width="100%" />
+<img src="./public/screenshots/home-desktop-light.png" alt="Desktop light view" width="100%" />
 
 ---
 
