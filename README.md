@@ -75,7 +75,7 @@ git clone https://github.com/sumitkumarsharm/WeatherApp
 ### 2. Install dependencies
 
 ```bash
-cd react-weather-app
+cd reactweatherapp
 npm install
 ```
 
@@ -83,4 +83,10 @@ npm install
 
 ```bash
 npm run dev
+```
+
+```md
+## 🔗 Live Demo
+
+👉 [Check it Live](https://your-vercel-link.vercel.app)
 ```
