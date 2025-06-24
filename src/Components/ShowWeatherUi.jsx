@@ -120,7 +120,7 @@ const ShowWatherUi = ({ isDark }) => {
             <sup>°</sup>C
           </h1>
 
-          {/* Stats */}
+          {/* weather Stats */}
           <div className="flex flex-col sm:flex-row items-center justify-between mt-6 gap-4 text-center">
             {[
               { label: "Humidity", value: `${weather.main?.humidity}%` },
