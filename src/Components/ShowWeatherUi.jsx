@@ -111,7 +111,9 @@ const ShowWatherUi = ({ isDark }) => {
             {weather.name}, {weather.sys?.country}
           </h2>
 
-          <p className={`text-base sm:text-lg capitalize ${fadedText}`}>
+          <p
+            className={`text-base sm:text-lg capitalize text-white ${fadedText}`}
+          >
             {weather.weather?.[0]?.description || "N/A"}
           </p>
 
