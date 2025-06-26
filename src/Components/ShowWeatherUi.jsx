@@ -107,7 +107,9 @@ const ShowWatherUi = ({ isDark }) => {
             className="w-20 sm:w-24 md:w-28 h-auto mx-auto object-contain"
           />
 
-          <h2 className={`text-2xl sm:text-3xl font-bold ${baseText}`}>
+          <h2
+            className={`text-2xl sm:text-3xl font-bold text-white ${baseText}`}
+          >
             {weather.name}, {weather.sys?.country}
           </h2>
 
