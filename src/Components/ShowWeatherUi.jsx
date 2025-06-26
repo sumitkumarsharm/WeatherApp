@@ -135,7 +135,7 @@ const ShowWatherUi = ({ isDark }) => {
             ].map((item) => (
               <div
                 key={item.label}
-                className={`px-4 py-3 flex-1 rounded-lg backdrop-blur-sm w-full sm:w-auto ${boxBg}`}
+                className={`px-4 py-3 flex-1 text-white rounded-lg backdrop-blur-sm w-full sm:w-auto ${boxBg}`}
               >
                 <p className="capitalize text-sm">{item.label}</p>
                 <p className="text-sm font-semibold">{item.value}</p>
