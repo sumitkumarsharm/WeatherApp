@@ -115,7 +115,9 @@ const ShowWatherUi = ({ isDark }) => {
             {weather.weather?.[0]?.description || "N/A"}
           </p>
 
-          <h1 className={`text-4xl sm:text-5xl font-bold mt-4 ${baseText}`}>
+          <h1
+            className={`text-4xl sm:text-5xl font-bold mt-4 text-white ${baseText}`}
+          >
             {Math.round(weather.main?.temp - 273.15)}
             <sup>°</sup>C
           </h1>
