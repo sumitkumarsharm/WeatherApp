@@ -1,42 +1,12 @@
 import { useState, useEffect } from "react";
 import { CloudRain, Search } from "lucide-react";
+import { useWeather } from "../Hook/useWeather";
 
 const ShowWatherUi = ({ isDark }) => {
-  const [weather, setWeather] = useState(null);
-  const [error, setError] = useState("");
   const [city, setCity] = useState("");
   const [inputCity, setInputCity] = useState("");
-  const [loading, setLoading] = useState(false);
 
-  const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
-
-  useEffect(() => {
-    if (!city) return;
-
-    const fetchWeather = async () => {
-      try {
-        setError("");
-        setLoading(true);
-        const response = await fetch(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&timestamp=${Date.now()}`
-        );
-
-        if (!response.ok) throw new Error("City not found ❌");
-
-        const data = await response.json();
-        setWeather(data);
-        setInputCity(""); // ✅ clear input after success
-      } catch (err) {
-        setWeather(null);
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchWeather();
-  }, [city, apiKey]);
-
+  const { weather, error, loading } = useWeather(city);
   const handleSearch = () => {
     if (inputCity.trim()) {
       setCity(inputCity.trim());
