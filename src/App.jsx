@@ -15,7 +15,7 @@ const App = () => {
     >
       {/* Version tag */}
       <div className="fixed top-4 left-4 text-xs sm:text-sm px-2 py-1 rounded bg-black/30 text-white backdrop-blur z-50">
-        v1.0.0
+        Version 1.1.0
       </div>
 
       {/* Dark/Light toggle */}
