@@ -4,28 +4,6 @@ import ShowWeatherUi from "./Components/ShowWeatherUi";
 
 const App = () => {
   const [isDark, setIsDark] = useState(false);
-  // const [foreCast, setForeCast] = useState([]);
-
-  // // remove krna hai
-  // const city = "Bhopal";
-  // const cnt = 7;
-  // const API_key = "8d6c611230a9a88abc11174527a02fb9";
-  // const mainurl = `https://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&cnt=${cnt}&appid=${API_key}`;
-
-  // useEffect(() => {
-  //   const foreCast = async () => {
-  //     const data = await fetch(mainurl);
-  //     const json = await data.json();
-  //     setForeCast(json.list);
-  //   };
-
-  //   foreCast();
-  // }, []);
-  // foreCast.map((day) => {
-  //   const Dates = new Date(day.dt * 1000);
-  //   const options = { weekday: "short", month: "short", day: "numeric" };
-  //   console.log(Dates.toLocaleDateString("en-US", options));
-  // });
 
   const bgGradient = isDark
     ? "from-gray-900 to-black"
