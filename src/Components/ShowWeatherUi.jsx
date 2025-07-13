@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 import { CloudRain, Search } from "lucide-react";
 import { useWeather } from "../Hook/useWeather";
+import { useForecast } from "../Hook/useForecast";
 
 const ShowWatherUi = ({ isDark }) => {
   const [city, setCity] = useState("");
   const [inputCity, setInputCity] = useState("");
-
   const { weather, error, loading } = useWeather(city);
+  const { foreCast, forecastError, foreCastloading } = useForecast(city);
+  console.log(foreCast.list);
+
   const handleSearch = () => {
     if (inputCity.trim()) {
       setCity(inputCity.trim());
