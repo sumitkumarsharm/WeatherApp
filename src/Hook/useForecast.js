@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 
-export const useForecast = () => {
+export const useForecast = (city) => {
   const [foreCast, setForeCast] = useState(null);
   const [forecastError, setForecastError] = useState("");
   const [foreCastLoading, setForeCastLoading] = useState(false);
 
-  const city = "Bhopal";
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
   const cnt = 15;
 
@@ -18,7 +17,7 @@ export const useForecast = () => {
 
       try {
         const response = await fetch(
-          `https://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&cnt=${cnt}&appid=${apiKey}`
+          `https://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&cnt=${cnt}&appid=${apiKey}&units=metric`
         );
 
         if (!response.ok) {
