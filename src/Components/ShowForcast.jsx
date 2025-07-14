@@ -71,7 +71,7 @@ const ShowForecast = ({ city, isDark }) => {
           <div className="text-center">
             <button
               onClick={() => setShowFullForecast(true)}
-              className="mt-4 px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow transition"
+              className="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow transition"
             >
               Show 15-Day Weather Forecast
             </button>
